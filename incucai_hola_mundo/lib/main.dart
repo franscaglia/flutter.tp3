@@ -22,6 +22,7 @@ class _MainAppState extends State<MainApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        appBar: AppBar(title: Text('titulo')),
         body: SafeArea(
           child: Center(
             child: Column(

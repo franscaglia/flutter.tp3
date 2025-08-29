@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:incucai_navegacion_basica/screens/home.dart';
 import 'package:go_router/go_router.dart';
@@ -20,9 +19,11 @@ class _LoginView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(mainAxisAlignment: MainAxisAlignment.center,
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Padding( padding: const EdgeInsets.all(8.0),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
           child: TextField(
             controller: _usernameController,
             decoration: const InputDecoration(
@@ -34,9 +35,15 @@ class _LoginView extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 16),
-        ElevatedButton(onPressed: () {
-          context.pushNamed(HomeScreen.nombre, extra: _usernameController.text);
-        }), child: const Text('Login'))
+        ElevatedButton(
+          onPressed: () {
+            context.pushNamed(
+              HomeScreen.nombre,
+              extra: _usernameController.text,
+            );
+          },
+          child: const Text('Login'),
+        ),
       ],
     );
   }
